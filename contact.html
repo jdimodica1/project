@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        a {
+            color: black;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: red;
+        }
+        img {
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        #logo {
+            width: 100px;
+            margin-left: 10px;
+            display: inline;
+        }
+        p {
+            text-align: center;
+        }
+        form {
+            background-color: lightcoral;
+        }
+        body {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <table>
+            <a href="index.html"><img src="images/Got Sole Logo.png" alt="Logo" id="logo"></a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="events.html">Events</a>
+            <a href="benefits.html">Benefits</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </table>
+    </header>
+    <hr>
+    <div></div>
+    <div></div>
+    <h1>Contact Us</h1>
+    <form method="POST" action="mailto:jdimodica1@babson.edu">
+        <fieldset>
+            <legend>Your Information:</legend>
+            <div>
+                <label for="name"></label>Name:</label>
+                <input 
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name here"
+                />
+            </div>
+            <div>
+                <label for="email"></label>Email:</label>
+                <input 
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Enter your email here"
+                />
+        </fieldset>
+        <fieldset>
+            <legend>Your Inquiry:</legend>
+            <div>
+                <label for="product">What Got Sole service are you inquiring about?</label>
+            </div>
+            <div>
+                <select name="product" id="product">
+                    <option value="Marketplace">Marketplace</option>
+                    <option value="Events">Events</option>
+                    <option value="Sponsorship">Sponsorship</option>
+                </select>
+                <div>
+                    <div>How did you find out about us?</div>
+                    <div>
+                        <input type="checkbox" id="Social Media" name="Social Media" value="Social Media"/>
+                        <label for="Social Media">Social Media</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Online Search" name="Online Search" value="Online Search"/>
+                        <label for="Online Search">Online Search</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Word of Mouth" name="Word of Mouth" value="Word of Mouth"/>
+                        <label for="Word of Mouth">Word of Mouth</label>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="reply">Tell us what's on your mind:</label>
+                        </div>
+                        <div>
+                            <textarea name="reply" id="reply" cols="25" rows="5" placeholder=></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="signup" name="signup" value="signup"checked="on"/>
+                        <label for="signup">Sign me up for email updates</label>
+                    </div>
+                    <div>
+                        <button
+                            type="submit"
+                            name="submit-button">
+                            Submit
+                            </button>
+                    </div>
+        </fieldset>
+    </form>
+</body>
+<hr>
+<table>
+    <a href="marketplace.html">Marketplace</a>
+    <a href="events.html">Events</a>
+    <a href="benefits.html">Benefits</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="sitemap.html">Sitemap</a>
+</table>
+</html>

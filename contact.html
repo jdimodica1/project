@@ -9,6 +9,8 @@
     <meta name="keywords" content="Got Sole, Contact, Sneakerhead, Sneakers, Reselling">
     <meta name="author" content="Got Sole LLC">
     <title>Contact</title>
+    <script src="main.js"></script>
+
     <style>
         a {
             color: black;
@@ -45,18 +47,18 @@
     <header>
         <table>
             <a href="index.html"><img src="images/Got Sole Logo.png" alt="Logo" id="logo"></a>
-            <a href="marketplace.html">Marketplace</a>
-            <a href="events.html">Events</a>
-            <a href="benefits.html">Benefits</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact.html">Contact</a>
+            <a id="header-title" onmouseover="enlargeHeaderTexts(this)" href="marketplace.html">Marketplace</a>
+            <a id="header-title1" onmouseover="enlargeHeaderTexts(this)" href="events.html">Events</a>
+            <a id="header-title2" onmouseover="enlargeHeaderTexts(this)" href="benefits.html">Benefits</a>
+            <a id="header-title3" onmouseover="enlargeHeaderTexts(this)" href="faq.html">FAQ</a>
+            <a id="header-title4" onmouseover="enlargeHeaderTexts(this)" href="contact.html">Contact</a>
         </table>
     </header>
     <hr>
     <div></div>
     <div></div>
-    <h1>Contact Us</h1>
-    <form method="POST" action="mailto:jdimodica1@babson.edu">
+    <h1 id="contact-page" onmouseover="enLargeContactHeader(this)" >Contact Us</h1>
+    <form method="POST" name="myForm" action="mailto:jdimodica1@babson.edu" onsubmit="return validateForm()" method="post">
         <fieldset>
             <legend>Your Information:</legend>
             <div>

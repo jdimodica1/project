@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Got Sole Website Project Index.">
-    <meta name="keywords" content="Got Sole, Index, Sneakers, Reselling">
+    <meta name="description" content="The Got Sole Marketplace. Get More Information.">
+    <meta name="keywords" content="Got Sole, Marketplace, Sneakers, Reselling">
     <meta name="author" content="Got Sole LLC">
-    <title>Home</title>
+    <title>Marketplace</title>
     <style>
         a {
             color: black;
@@ -33,44 +33,60 @@
         p {
             text-align: center;
         }
+        iframe {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            align-items: center;
+        }
         body {
             background-color: lightgray;
         }
+        #loading {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(192, 192, 192, 0.5);
+            background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+            background-repeat: no-repeat;
+            background-position: center;
+}
+.home    {  }
     </style>
+    <script src="main.js"></script>
 </head>
-<body>
+<body class="home"> 
+    <div id="loading"></div>
     <header>
         <table>
-            <a href="index.html"><img src="images/Got Sole Logo.png" alt="Logo" id="logo"></a>
-            <a href="marketplace.html">Marketplace</a>
-            <a href="events.html">Events</a>
-            <a href="benefits.html">Benefits</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact.html">Contact</a>
+            <a   href="index.html"><img src="images/Got Sole Logo.png" alt="Logo" id="logo"></a>
+            <a id="header-title" onmouseover="enlargeHeaderTexts(this)" href="marketplace.html">Marketplace</a>
+            <a id="header-title1" onmouseover="enlargeHeaderTexts(this)" href="events.html">Events</a>
+            <a id="header-title2" onmouseover="enlargeHeaderTexts(this)" href="benefits.html">Benefits</a>
+            <a id="header-title3" onmouseover="enlargeHeaderTexts(this)" href="faq.html">FAQ</a>
+            <a id="header-title4" onmouseover="enlargeHeaderTexts(this)" href="contact.html">Contact</a>
         </table>
-        <hr>
     </header>
+    <hr>
     <div></div>
     <div></div>
-    <h1>Welcome to Got Sole</h1>
+    <h1 id="title-page" onmouseover="enlargeMarketPlaceTexts(this)">  The Got Sole Marketplace!</h1>
     <div></div>
     <div></div>
-    <img src="images/Got Sole Team.png" alt="Got Sole Team">
     <p>
-        Got Sole is the Ultimate Sneaker Hub! You will learn more about our company and community on this site!
+        Get more info about our marketplace below! Buy/Sell/Trade with No Fees!
+    </p>
+    <img onmouseover="enLargeImages(this)" id="market-place-image" src="images/More.png" alt="Marketplace Benefits">
+    <div></div>
+    <p>
+        Sign up for our marketplace <a href="https://www.gotsole.market">Here!</a> Your first week is free to try!
     </p>
     <div></div>
-    <div></div>
-    <img src="images/Marketplace.png" alt="Marketplace">
-    <p>
-        We provide an online marketplace for members to make deals with no fees! Learn more about our marketplace <a href="marketplace.html">Here</a>!
-    </p>
-    <div></div>
-    <div></div>
-    <img src="images/Events.png" alt="Events">
-    <p>
-        We also host conventions for enthusiats to buy, sell and trade in person! Typically bringing in over 3000+ attendees, you can find more information about upcoming events <a href="events.html">Here</a>!
-    </p>
+    <img onmouseover="enLargeSecondImages(this)" id="market-place-image2" src="images/Marketplace Flier Join Now.PNG" alt="Join Now">
 </body>
 <hr>
 <table>
@@ -82,3 +98,23 @@
     <a href="sitemap.html">Sitemap</a>
 </table>
 </html>
+
+<script>
+     function onReady(callback) {
+    var intervalId = window.setInterval(function() {
+      if (document.getElementsByTagName('body')[0] !== undefined) {
+        window.clearInterval(intervalId);
+        callback.call(this);
+      }
+    }, 1000);
+  }
+  
+  function setVisible(selector, visible) {
+    document.querySelector(selector).style.display = visible ? 'block' : 'none';
+  }
+  
+  onReady(function() {
+    setVisible('.home', true);
+    setVisible('#loading', false);
+  });
+</script>
